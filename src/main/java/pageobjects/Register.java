@@ -47,4 +47,14 @@ public class Register extends Page {
         buttonContinue.click();
 
     }
+
+    public boolean allTheElemantsAreDisplayed() {
+        return firstNameInput.isDisplayed() && lastNameInput.isDisplayed() && eMailInput.isDisplayed() && telephoneInput.isDisplayed() &&
+                passwordInput.isDisplayed() && passwordConfirmInput.isDisplayed() && buttonContinue.isDisplayed();
+
+    }
+    public void clickContinuie(){
+        continueButton.click();
+    }
 }
+

@@ -12,7 +12,7 @@ public class TestRunner {
         home.navigateRegister();
 
         Register register = new Register(webDriverManager.getDriver());
-        register.registrForm("Vahnovan", "Marin", "vihnovanmarin@mail.ru", "060123456", "bond777561", "bond777561");
+        register.registrForm("Vahnovan", "Marin", "vinovanmarin@mail.ru", "060123456", "bond777561", "bond777561");
 
         Thread.sleep(10000);
         webDriverManager.getDriver().close();
