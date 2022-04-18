@@ -2,8 +2,8 @@ package pageobjects;
 
 import org.openqa.selenium.WebDriver;
 
-public class Contact extends Page{
-    public Contact(WebDriver driver){
+public class ContactPage extends Page{
+    public ContactPage(WebDriver driver){
         super(driver);
     }
 }

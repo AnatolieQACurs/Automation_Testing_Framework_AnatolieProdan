@@ -4,9 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Register extends Page {
+public class RegisterPage extends Page {
 
-    public Register(WebDriver driver) {
+    public RegisterPage(WebDriver driver) {
         super(driver);
     }
 
@@ -31,10 +31,10 @@ public class Register extends Page {
     @FindBy(xpath = "//*[@id=\"content\"]/form/fieldset[3]/div/div/label[1]")
     private WebElement subscibe;
 
-    @FindBy(xpath = "///*[@id=\"content\"]/form/div/div/input[1]")
-    private WebElement checkboxButton;
+//    @FindBy(xpath = "///*[@id=\"content\"]/form/div/div/input[1]")
+//    private WebElement checkboxButton;
 
-    @FindBy(xpath = "//*[@id=\"content\"]/form/div/div/input[2]")
+    @FindBy(xpath = ".//input[@value='Continue'][@type='submit']")
     private WebElement buttonContinue;
 
     public void registrForm(String firstName, String lastName, String eMail, String telephone, String password, String confirm) {
@@ -44,7 +44,15 @@ public class Register extends Page {
         telephoneInput.sendKeys(telephone);
         passwordInput.sendKeys(password);
         passwordConfirmInput.sendKeys(confirm);
-        buttonContinue.click();
+    }
+
+    public boolean allTheElemantsAreDisplayed() {
+        return firstNameInput.isDisplayed() && lastNameInput.isDisplayed() && eMailInput.isDisplayed() && telephoneInput.isDisplayed() &&
+                passwordInput.isDisplayed() && passwordConfirmInput.isDisplayed() && buttonContinue.isDisplayed();
 
     }
+    public void clickContinuie(){
+        buttonContinue.click();
+    }
 }
+

@@ -2,8 +2,8 @@ package pageobjects;
 
 import org.openqa.selenium.WebDriver;
 
-public class Home extends Page {
-    public Home(WebDriver driver) {
+public class HomePage extends Page {
+    public HomePage(WebDriver driver) {
         super(driver);
     }
 }

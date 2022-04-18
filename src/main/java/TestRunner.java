@@ -1,18 +1,18 @@
 import managers.WebDriverManager;
-import pageobjects.Home;
-import pageobjects.Register;
+import pageobjects.HomePage;
+import pageobjects.RegisterPage;
 
 public class TestRunner {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager webDriverManager = new WebDriverManager("CHROME");
 
-        webDriverManager.getDriver().get("https://demo.opencart.com/");
+        webDriverManager.getDriver().get("https://demo-opencart.com/");
 
-        Home home = new Home(webDriverManager.getDriver());
+        HomePage home = new HomePage(webDriverManager.getDriver());
         home.navigateRegister();
 
-        Register register = new Register(webDriverManager.getDriver());
-        register.registrForm("Vahnovan", "Marin", "vihnovanmarin@mail.ru", "060123456", "bond777561", "bond777561");
+        RegisterPage register = new RegisterPage(webDriverManager.getDriver());
+        register.registrForm("Vahnovan", "Marin", "vinovanmariin@mail.ru", "060123456", "bond777561", "bond777561");
 
         Thread.sleep(10000);
         webDriverManager.getDriver().close();
